@@ -1,0 +1,4 @@
+"RUN.sh" runs scripts "00_mkHyperParameterSet.py" and "01_CausalCNN_run.sh". 
+"01_CausalCNN_run.sh" runs script "02_CausalCNN.py". 
+In script "01_CausalCNN_run.sh", number of multi-threading cores are controlled by MAX_J, where default is 40.
+Output model parameters and logs are saved under "*_out/" folder. 

@@ -1,0 +1,7 @@
+"RUN.sh" generates three files.
+ 
+1. OUT_valid_performance.pdf: Shows the performance of the best model in the validation set.
+
+2. OUT_test_performance.pdf: Shows the final performance of the best model checked in the independent test set. 
+
+3. OUT_score_*.txt: Shows the score of the candidate causal SNPs. 1st and 2nd columns correspond to chromosome and position (0-based), and 3rd column correspond to the lead SNP, with the most significant GWAS p-value. 4th column representss the "causal score" calculated by the best model. SNPs with causal score > 0.5 are classified as positive, and are putative causal variants. Note that in some cases, the lead SNP does not have the highest causal score. 

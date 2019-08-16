@@ -1,0 +1,9 @@
+Following variables in RUN.sh script can be adjusted, although defalut value is recommended. 
+
+1. SigPVal
+Indicates the cutoff for selecting lead SNPs. 
+If summary statistics include a large number of genome-wide significant loci (e.g. significantly more than 100 loci), more significant value may be needed (e.g. 5e-08).
+
+2. CUTOFF
+Indicates the feature filtering cutoff. If value is higher, more features will be filtered out. 
+
