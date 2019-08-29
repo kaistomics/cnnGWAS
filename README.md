@@ -4,9 +4,15 @@ This is the repository for cnnGWAS, which is a method that captures complex biol
 
 ## Environment setting
 > Installing miniconda:  
+
+
 We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
 
+
+
 > Environment setting:   
+
+
 All software tests were done under the following environment setting, and therefore we *strongly* recommend to set the miniconda environment via following commands: 
 ```
 conda create --name cnnGWAS python=2.7
@@ -14,7 +20,10 @@ conda activate cnnGWAS
 conda install theano=1.0.3 numpy=1.15.4 matplotlib=2.2.3 pandas=0.24.2 bedtools=2.28.0 bedops=2.4.36 mkl=2019.4
 ```
 
-> Required R packages (R version 3.5.2).
+
+> Required R packages (R version 3.5.2):
+
+
 ```R
 library(ggplot2)
 library(gplots)
@@ -46,7 +55,7 @@ cd ..
 ```
 
 
-## 0. Input file preparation   
+## Input file preparation   
 
 > Input file format: Input summary statistics file should be located under directory "00_RawDatas". Input file is a tab delimited text file with 6 columns. Each of the columns MUST have a header row named as follows:
 ```
