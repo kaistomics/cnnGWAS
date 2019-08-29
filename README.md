@@ -3,11 +3,11 @@ This is the repository for cnnGWAS, which is a method that captures complex biol
 
 
 ## Environment setting
-###Installing miniconda:  
+### Installing miniconda:  
 We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
 
 
-###Environment test:   
+### Environment test:   
 All software tests were done under the following environment setting, and therefore we *strongly* recommend to set the miniconda environment via following commands: 
 ```
 conda create --name cnnGWAS python=2.7
@@ -16,7 +16,7 @@ conda install theano=1.0.3 numpy=1.15.4 matplotlib=2.2.3 pandas=0.24.2 bedtools=
 ```
 
 
-###Required R packages (R version 3.5.2):
+### Required R packages (R version 3.5.2):
 ```R
 library(ggplot2)
 library(gplots)
@@ -27,14 +27,14 @@ library(reshape2)
 ```
 
 
-###Required tools
+### Required tools
 ```
 awk (GNU Awk 3.1.7)
 wget (GNU Wget 1.12 built on linux-gnu)
 ```
 
 
-###Tools that will be installed
+### Tools that will be installed
 ```
 impG-summary (http://bogdan.bioinformatics.ucla.edu/software/impg/)
 ```
@@ -52,10 +52,10 @@ cd ..
 
 
 ## Input file preparation   
-###Input file format: 
-Input summary statistics file should be located under directory "00_RawDatas/". 
-Input file **must** be a tab delimited text file with 6 columns. 
-Each of the columns should have a header row named as follows:
+### Input file format: 
+Input summary statistics file should be located under directory "00_RawDatas/". \
+Input file **must** be a tab delimited text file with 6 columns. \
+Each of the columns should have a header row named as follows: \
 
 ```
 snpid  chr     bp      a1      a2      zscore
