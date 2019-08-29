@@ -3,16 +3,11 @@ This is the repository for cnnGWAS, which is a method that captures complex biol
 
 
 ## Environment setting
-> Installing miniconda:  
-
-
+###Installing miniconda:  
 We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
 
 
-
-> Environment setting:   
-
-
+###Environment test:   
 All software tests were done under the following environment setting, and therefore we *strongly* recommend to set the miniconda environment via following commands: 
 ```
 conda create --name cnnGWAS python=2.7
@@ -21,9 +16,7 @@ conda install theano=1.0.3 numpy=1.15.4 matplotlib=2.2.3 pandas=0.24.2 bedtools=
 ```
 
 
-> Required R packages (R version 3.5.2):
-
-
+###Required R packages (R version 3.5.2):
 ```R
 library(ggplot2)
 library(gplots)
@@ -33,20 +26,23 @@ library(plyr)
 library(reshape2)
 ```
 
-> Required tools
+
+###Required tools
 ```
 awk (GNU Awk 3.1.7)
 wget (GNU Wget 1.12 built on linux-gnu)
 ```
 
-> Tools that will be installed
+
+###Tools that will be installed
 ```
 impG-summary (http://bogdan.bioinformatics.ucla.edu/software/impg/)
 ```
 
+
 ## Epigenetic feature DB preparation  
 
-> Users can download the required files by executing the following commands:
+Users can download the required files by executing the following commands:
 
 ```      
 cd DB
@@ -56,16 +52,20 @@ cd ..
 
 
 ## Input file preparation   
+###Input file format: 
+Input summary statistics file should be located under directory "00_RawDatas/". 
+Input file **must** be a tab delimited text file with 6 columns. 
+Each of the columns should have a header row named as follows:
 
-> Input file format: Input summary statistics file should be located under directory "00_RawDatas". Input file is a tab delimited text file with 6 columns. Each of the columns MUST have a header row named as follows:
 ```
 snpid  chr     bp      a1      a2      zscore
 rs3131972       chr1    752721  A       G       0.618384984132729
 rs3131969       chr1    754182  A       G       1.20540840742781
 ```
+
 All coordinates are based on hg19 (GRCh37). Raw GWAS summary statistics files can include different information; in most cases, z-score can be calculated from the given information. Example input file "AUTsummary.hg19.txt" is provided. 
 
-> Input file name: 
+###Input file name: 
 We recommend simple file prefix, preferably disease name (e.g. SLE), ALWAYS followed by ".txt" extension. Underbar "_" MUST NOT be included inside a file prefix(e.g. PSY_AUT_dis.txt), since it will cause string processing error. [Example file names: "SLE.txt", "MDD2019.txt"]
 
 
