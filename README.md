@@ -1,11 +1,13 @@
 # cnnGWAS
-This is the repository for cnnGWAS, which is a method that captures complex biological patterns shared by GWAS risk variants. By utilizing convolutional neural network, the model can select functional variants out of all candidate variants in a GWAS loci. 
+This is the repository for cnnGWAS, which is a method that captures complex biological patterns shared by GWAS risk variants. By utilizing convolutional neural network, the method prioritizes functional variants out of all candidate variants in a GWAS loci. 
 
 
 ## Environment setting
-> Installing miniconda: We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
+> Installing miniconda:  
+We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
 
-> Environment setting: All software tests were done under the following environment setting, and therefore we strongly recommend to set the miniconda environment via following commands: 
+> Environment setting:   
+All software tests were done under the following environment setting, and therefore we *strongly* recommend to set the miniconda environment via following commands: 
 ```
 conda create --name cnnGWAS python=2.7
 conda activate cnnGWAS
@@ -13,7 +15,7 @@ conda install theano=1.0.3 numpy=1.15.4 matplotlib=2.2.3 pandas=0.24.2 bedtools=
 ```
 
 > Required R packages (R version 3.5.2).
-```
+```R
 library(ggplot2)
 library(gplots)
 library(grid)
