@@ -27,18 +27,19 @@ library(reshape2)
 ```
 
 
-#### Required tools
+#### Required tools:
 ```
 awk (GNU Awk 3.1.7)
 wget (GNU Wget 1.12 built on linux-gnu)
 ```
 
 
-#### Tools that will be installed
+#### Tools that will be installed:
 ```
 impG-summary (http://bogdan.bioinformatics.ucla.edu/software/impg/)
 ```
 
+#### Cloning the repository:
 * When environment setting is complete, clone or download the repository. Through step 0-4, epigenetic DB will be downloaded and training will take place. Input text file (GWAS summary statistics) is required. 
 
 
