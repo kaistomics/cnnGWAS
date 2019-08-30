@@ -40,11 +40,11 @@ impG-summary (http://bogdan.bioinformatics.ucla.edu/software/impg/)
 ```
 
 #### Cloning the repository:
-* When environment setting is complete, clone or download the repository. Through step 0-4, epigenetic DB will be downloaded and training will take place. Input text file (GWAS summary statistics) is required. 
+* When environment setting is complete, clone or download the repository. Through the following steps, epigenetic DB will be downloaded and training will take place. Input text file (GWAS summary statistics) is required. 
 
 
 
-## 0. Epigenetic feature DB preparation  
+## Epigenetic feature DB preparation  
 
 * Required files can be downloaded by executing the following commands:
 
@@ -55,7 +55,7 @@ cd ..
 ```
 
 
-## 0. Input file preparation   
+## Input file preparation   
 #### Input file format: 
 * Input summary statistics file should be located under directory "00_RawDatas/". Example input file "AUTsummary.hg19.txt" is provided.
 * Input file **must** be a tab delimited text file with 6 columns. 
