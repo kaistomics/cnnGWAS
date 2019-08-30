@@ -4,11 +4,11 @@ This is the repository for cnnGWAS, which is a method that captures complex biol
 
 ## Environment setting
 #### Installing miniconda:  
-We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
+* We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
 
 
 #### Environment test:   
-All software tests were done under the following environment setting, and therefore we *strongly* recommend to set the miniconda environment via following commands: 
+* All software tests were done under the following environment setting, and therefore we *strongly* recommend to set the miniconda environment via following commands: 
 ```
 conda create --name cnnGWAS python=2.7
 conda activate cnnGWAS
@@ -39,10 +39,13 @@ wget (GNU Wget 1.12 built on linux-gnu)
 impG-summary (http://bogdan.bioinformatics.ucla.edu/software/impg/)
 ```
 
+* When environment setting is complete, clone or download the repository. Through step 0-4, epigenetic DB will be downloaded and training will take place. Input text file (GWAS summary statistics) is required. 
+
+
 
 ## 0. Epigenetic feature DB preparation  
 
-Required files can be downloaded by executing the following commands:
+* Required files can be downloaded by executing the following commands:
 
 ```      
 cd DB
@@ -74,7 +77,7 @@ rs3131969       chr1    754182  A       G       1.20540840742781
 
 ## 1. Imputation of association p-value using ImpG-summary
 
-* Following command executes the imputation process. Multiple summary statistics file can be given as a input (e.g. bash RUN.sh FILE1.txt FILE2.txt FILE3.txt).
+> Following command executes the imputation process. Multiple summary statistics file can be given as a input (e.g. bash RUN.sh FILE1.txt FILE2.txt FILE3.txt).
 
 ```
 cd 01_RunImpG
@@ -113,6 +116,6 @@ cd ..
 ```
 
 ## Notes
-> Each folder contains "NOTE" or "RUN_NOTE.txt". Please read the contents before executing the software. 
+* Each folder contains "NOTE" or "RUN_NOTE.txt". Please read the contents before executing the software. 
 
 
