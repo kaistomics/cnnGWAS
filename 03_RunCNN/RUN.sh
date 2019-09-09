@@ -5,7 +5,7 @@ RAWFILE_list="$@"
 DIR='../02_PreProc/Data/'
 ###########################################
 
-python 00_mkHyperParameterSet.py |shuf |head -50 > 00_HyperParameterSet
+python 00_mkHyperParameterSet.py |shuf |head -500 > 00_HyperParameterSet
 
 for RAWFILE in ${RAWFILE_list}
 do
