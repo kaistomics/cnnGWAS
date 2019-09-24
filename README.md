@@ -1,5 +1,5 @@
 # cnnGWAS
-This is the repository for cnnGWAS, which is a method that captures complex biological patterns shared by GWAS risk variants. By utilizing convolutional neural network, the method prioritizes functional variants out of all candidate variants in a GWAS loci. 
+This is the repository for cnnGWAS, which is a method that captures complex biological patterns shared by GWAS risk variants. By utilizing convolutional neural networks, the method prioritizes functional variants among all candidate variants in GWAS loci.
 
 
 ## Environment setting
@@ -7,7 +7,7 @@ This is the repository for cnnGWAS, which is a method that captures complex biol
 * We recommend using miniconda as a package manager when executing cnnGWAS. Miniconda can be installed from the following link: https://docs.conda.io/en/latest/miniconda.html#
 
 
-#### Environment test:   
+#### Environment setting:   
 * All software tests were done under the following environment setting, and therefore we *strongly* recommend to set the miniconda environment via following commands: 
 ```
 conda create --name cnnGWAS python=2.7
@@ -40,13 +40,13 @@ impG-summary (http://bogdan.bioinformatics.ucla.edu/software/impg/)
 ```
 
 #### Cloning the repository:
-* When environment setting is complete, clone or download the repository. Through the following steps, epigenetic DB will be downloaded and training will take place. Input text file (GWAS summary statistics) is required. 
+* When environment setting is complete, clone or download the repository. Through the following steps, feature DB will be downloaded and training will take place. Input text file (GWAS summary statistics) is required. 
 
 
 
-## Epigenetic feature DB preparation  
+## Feature DB preparation  
 
-* Required files can be downloaded by executing the following commands:
+* Required data can be downloaded by executing the following commands:
 
 ```      
 cd DB
@@ -67,18 +67,19 @@ rs3131972       chr1    752721  A       G       0.618384984132729
 rs3131969       chr1    754182  A       G       1.20540840742781
 ```
 
-* All coordinates are based on hg19 (GRCh37). Raw GWAS summary statistics files can include different information; in most cases, z-score can be calculated from the given information. 
+* All coordinates are based on hg19 (GRCh37). 
+* Raw GWAS summary statistics files can include different information; in most cases, z-score can be calculated from the given information. 
 
 
 #### Input file name: 
 * We recommend simple file prefix, preferably disease name (e.g. SLE), **always** followed by ".txt" extension. 
-* Underbar "_" **must not** be included inside a file prefix(e.g. PSY_AUT_dis.txt), since it will cause string processing error. 
+* Underbar "_" **must not** be included inside a file prefix (e.g. PSY_AUT_dis.txt; not allowed), since it will cause string processing error. 
 * Example file names: "SLE.txt", "MDD2019.txt"
 
 
 ## 1. Imputation of association p-value using ImpG-summary
 
-> Following command executes the imputation process. Multiple summary statistics file can be given as a input (e.g. bash RUN.sh FILE1.txt FILE2.txt FILE3.txt).
+> Following command executes the imputation process. Multiple summary statistics file can be given as an input (e.g. bash RUN.sh FILE1.txt FILE2.txt FILE3.txt).
 
 ```
 cd 01_RunImpG
@@ -108,7 +109,7 @@ cd ..
 
 ## 4. Evaluation of the model performance
 
-> The performance of the model is saved as a pdf file. Also, the scores of candidate SNPs are calculated and given as a text file. SNPs with causal score > 0.5 are classified as positive, and are putative causal variants. 
+> The performance of the model is saved as a pdf file. Also, the scores of candidate SNPs are calculated and given as a text file. SNPs with causal score > 0.5 are classified as positive, and are candidate causal variants. 
 
 ```
 cd 04_Performance
