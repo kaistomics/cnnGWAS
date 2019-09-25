@@ -1,5 +1,5 @@
 # cnnGWAS
-This is the repository for cnnGWAS, which is a method that captures complex biological patterns shared by GWAS risk variants. By utilizing convolutional neural networks, the method prioritizes functional variants among all candidate variants in GWAS loci.
+This is the repository for cnnGWAS, which is a method that captures complex biological patterns shared by GWAS risk variants. By utilizing convolutional neural networks (CNN), the method prioritizes functional variants among all candidate variants in GWAS loci.
 
 
 ## Environment setting
@@ -79,7 +79,7 @@ rs3131969       chr1    754182  A       G       1.20540840742781
 
 ## 1. Imputation of association p-value using ImpG-summary
 
-> Following command executes the imputation process. Multiple summary statistics file can be given as an input (e.g. bash RUN.sh FILE1.txt FILE2.txt FILE3.txt).
+> Following command executes the imputation process. Multiple summary statistics files can be given as an input (e.g. bash RUN.sh FILE1.txt FILE2.txt FILE3.txt).
 
 ```
 cd 01_RunImpG
@@ -89,7 +89,7 @@ cd ..
 
 ## 2. Make input pickled files for CNN model training
 
-> In this stage, the input files (*.pkl.gz) for training are made.
+> In this stage, the input files (*.pkl.gz) for training are produced.
 
 ```
 cd 02_PreProc
@@ -99,7 +99,7 @@ cd ..
 
 ## 3. Model training
 
-> In this stage, the training itself take place. As an example, a sample file is provided (02_PreProc/Data/AUTsummary.hg19_AE_30SNP.pkl.gz).
+> In this stage, the training itself takes place. As an example, a sample input file is provided (02_PreProc/Data/AUTsummary.hg19_AE_30SNP.pkl.gz).
 
 ```
 cd 03_RunCNN
@@ -109,7 +109,7 @@ cd ..
 
 ## 4. Evaluation of the model performance
 
-> The performance of the model is saved as a pdf file. Also, the scores of candidate SNPs are calculated and given as a text file. SNPs with causal score > 0.5 are classified as positive, and are candidate causal variants. 
+> The performance of the model is saved as a pdf file. Also, the scores of candidate SNPs are calculated and given as a text file. SNPs with causal score > 0.5 are classified as positive, and are considered as candidate causal variants. 
 
 ```
 cd 04_Performance
